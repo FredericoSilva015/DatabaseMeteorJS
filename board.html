@@ -1,0 +1,68 @@
+<head>
+  <title></title>
+</head>
+
+<body>
+ 
+<div class="register">
+  {{> boardForm}}
+  {{> board}}
+ </div>
+ 
+  
+</body>
+
+<template name="board">
+
+	<fieldset class="row2">
+	<h1>Top Students</h1>
+	
+		
+		<p>
+		<label>History</label>
+		<label>Math</label>
+		<label>English</label>
+		</p>
+		<p>
+		<label>{{studentFinderHistory.[0].name}} : {{studentFinderHistory.[0].historySubject}}</label>
+		<label>{{studentFinderMath.[0].name}} : {{studentFinderMath.[0].mathSubject}}</label>
+		<label>{{studentFinderEnglish.[0].name}} : {{studentFinderEnglish.[0].englishSubject}}</label>
+		</p>
+		<p>
+		<input type="button" class="refresh" value="Refresh">
+		</p>
+	
+	</fieldset>
+	
+</template>
+
+<template name="boardForm">
+
+	<form class="input" >
+		<fieldset class="row1">
+			<h1>Insert Student</h1>
+			<p>
+				<label>Name:</label>
+				<input type="text" name="studentName">
+			
+				<label>English:</label>
+				<input  type="number" name="studentEnglish">
+			</p>
+			<p>
+				<label>Age:</label>
+				<input type="number" name="studentAge">
+			
+				<label>Math:</label>
+				<input  type="number" name="studentMath">
+			</p>
+			<p>
+				<label>Class:</label>
+				<input type="number" name="studentClass">
+			
+				<label>History:</label>
+				<input  type="number" name="studentHistory">
+			</p>
+			<input  type="submit" class="button" value="Add Student">
+		</fieldset>	
+	</form>
+</template>
